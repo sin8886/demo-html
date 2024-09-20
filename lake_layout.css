@@ -1,0 +1,172 @@
+﻿@charset "utf-8";
+
+/*
+   The Great Lakescape Lodge Layout Styles
+*/
+
+/* Structural Styles */
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1080px;
+  min-width: 640px;
+  background-color: #000000; /* Set background to black */
+  color: #ffffff; /* Set text color to white */
+}
+
+body > header > img {
+  width: 100%;
+  display: block;
+  margin: 0 auto; /* Ensure the image is centered with no extra margin */
+  padding: 0; /* Remove any default padding */
+}
+
+/* 调整 h1 标题居中放置在导航栏和图片之间 */
+header > h1 {
+  text-align: center;
+  font-size: 2.5em; /* 调整标题字体大小 */
+  margin: 10px 0; /* 设置上下相同的边距，稍微小一点 */
+  color: #ffffff; /* 设置字体颜色为白色 */
+}
+
+header > nav {
+  display: table;
+  width: 100%;
+  background-color: #820025; /* 紫色背景 */
+}
+
+header > nav > ul {
+  display: table-row;
+  list-style-type: none;
+}
+
+header > nav > ul > li {
+  display: table-cell;
+  text-align: center;
+}
+
+header > nav a {
+  display: block;
+  width: 100%;
+  color: #ffffff; /* 白色文字 */
+  text-decoration: none;
+  padding: 10px;
+}
+
+header > nav a:hover {
+  background-color: #c35acd; /* 浅紫色背景在悬停时 */
+}
+
+/* Ensure the right column floats to the right */
+section#leftcol {
+  width: 65%; /* Adjust to leave space for right column */
+  float: left;
+  margin-right: 0; /* Remove margin-right to make leftcol touch the image */
+}
+
+section#rightcol {
+  width: 30%;
+  float: right;
+  margin-right: 0; /* Remove margin-right to align with page edge */
+  background-color: #7c0082; /* Background color */
+  padding: 10px;
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+/* Ensure the left column floats to the left */
+body > section#leftcol {
+  width: 70%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0; /* Remove margin-right to make the leftcol and image touch */
+}
+
+blockquote {
+  font-style: italic;
+  background-color: #820082; /* Purple background */
+  color: #dda0dd;
+  padding: 10px;
+  margin-top: 10px;
+  border-left: none;
+}
+
+/* Set the font color of the right column headings to white */
+section#rightcol h2 {
+  color: #ffffff;
+}
+
+/* Set the background color of the blockquote to purple */
+section#rightcol blockquote {
+  background-color: #820068; /* Purple background */
+  color: #dda0dd; /* Light purple text */
+  padding: 10px;
+  border-left: none;
+  margin-top: 20px;
+}
+
+/* Notes section */
+/* Notes section */
+section#leftcol aside:nth-of-type(1) {
+  background-color: #ffd000; /* Orange-red background for Notes section */
+  padding: 10px; /* Add some padding for readability */
+  margin-left: 0; /* Remove left margin to align with text */
+}
+
+/* Upcoming Events section */
+section#leftcol aside:nth-of-type(2) {
+  background-color: #d2b48c; /* Tan background for Upcoming Events section */
+  padding: 10px; /* Add some padding for readability */
+  margin-left: 0; /* Remove left margin to align with text */
+}
+
+/* Section Layout */
+section#leftcol aside {
+  width: 40%;
+  float: left;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-bottom: 20px;
+}
+
+section#leftcol img {
+  width: 100%;
+  display: block;
+}
+
+/* Add to lake_layout.css */
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section#leftcol {
+  flex: 1; /* Allow left column to take available space */
+  margin-right: 20px; /* Add some space between columns */
+}
+
+section#rightcol {
+  flex-basis: 300px; /* Set a fixed width for the right column */
+  padding-right: 10px; /* Add padding to the right */
+  box-sizing: border-box; /* Ensure padding is included in width */
+  margin-right: 0; /* Remove extra margin */
+  margin-bottom: 0; /* Remove any bottom margin */
+}
+
+/* Remove float properties for leftcol and rightcol */
+section#leftcol,
+section#rightcol {
+  float: none;
+}
+
+/* Ensure blockquote in rightcol has consistent margin */
+section#rightcol blockquote {
+  margin-top: 20px; /* Adjust as needed to align with other content */
+}
+
+/* Adjust footer to clear both columns and be next to rightcol */
+footer {
+  clear: both;
+  width: 100%;
+  margin-top: 0; /* Remove any margin-top to ensure it sticks to right column */
+  padding-top: 0;
+}
